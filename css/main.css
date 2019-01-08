@@ -77,19 +77,19 @@ header {
 
 #header-right ul.contacts > li {
     position: relative;
-    width: 191px;
+    width: 195px;
 }
 
 #header-right ul.social > li {
     width: 47px;
 }
 
-header ul.contacts > li:not(:last-child) a i {
+#header-right ul.contacts > li:not(:last-child) a i {
     color: #ab987a;
     margin-right: 5px;
 }
 
-header ul.contacts > li:not(:nth-child(2))::before {
+#header-right ul.contacts > li:not(:nth-child(2))::before {
     position: absolute;
     left: 0;
     top: 25%;
@@ -99,7 +99,7 @@ header ul.contacts > li:not(:nth-child(2))::before {
     background-color: #d5d5d5;
 }
 
-header ul.contacts > li:not(:nth-child(2))::after {
+#header-right ul.contacts > li:not(:nth-child(2))::after {
     position: absolute;
     right: 0;
     top: 25%;
@@ -109,13 +109,13 @@ header ul.contacts > li:not(:nth-child(2))::after {
     background-color: #d5d5d5;
 }
 
-header ul.contacts > li a, header ul.social > li a {
+#header-right ul.contacts > li a, header ul.social > li a {
     color: #032f3e;
     font-size: 18px;
     display: block;
 }
 
-header ul.contacts > li a {
+#header-right ul.contacts > li a {
     width: 100%;
     height: 100%;
     padding: 0 15px 0 15px;
@@ -141,7 +141,7 @@ nav ul {
 nav ul li {
     float: left;
     border-right: 1px solid #0d3948;
-    width: 191px;
+    width: 195px;
 }
 
 nav ul li:first-child {
@@ -169,50 +169,113 @@ nav ul li.active a {
 #top-slider::after {
     content: "";
     display: block;
-    clear: both;
     position: absolute;
-    bottom: 0;
-    right: 50%;
-    width: 40px;
-    background-color: #fff;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 50px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
 }
 
-#top-slider .slider-control {
+#top-slider .item {
+    position: relative;
+}
+
+#top-slider .item .slider-control {
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-#top-slider .slider-control a {
+#top-slider .item .slider-control a {
     color: #fff;
     display: block;
+    font-size: 20px;
 
 }
 
-#top-slider .slider-control a:not(:last-child) {
+#top-slider .item .slide-down {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#top-slider .item .slide-down a {
+    color: #ab987a;
+    font-size: 30px;
+}
+
+#top-slider .item .slider-control a:not(:last-child) {
     margin-bottom: 10px;
 }
 
-#top-slider .slider-control a .square {
+#top-slider .item .slider-control a .square {
     display: block;
     transform: rotate(45deg);
-    font-size: 8px;
+    font-size: 10px;
 }
 
-#top-slider .slider-control a .angles {
+#top-slider .item .slider-control a .angles {
     display: block;
 }
 
-#top-slider .slider-control a .active {
+#top-slider .item .slider-control a .active {
     color: #ab987a;
 }
 
-#top-slider .slider-control a .angles:first-child {
+#top-slider .item .slider-control a .angles:first-child {
     margin-bottom: 20px;
 }
 
-#top-slider .slider-control a .angles:last-child {
+#top-slider .item .slider-control a .angles:last-child {
     margin-top: 20px;
+}
+
+#top-slider .item .slider-body {
+    position: relative;
+}
+
+#top-slider .item .slider-body .content {
+    position: absolute;
+    right: 10px;
+    bottom: 80px;
+    text-align: right;
+    overflow: hidden;
+}
+
+#top-slider .item .slider-body .content h3 {
+    font-size: 65px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+#top-slider .item .slider-body .content h3:nth-child(2) {
+    font-weight: lighter;
+}
+
+#top-slider .item .slider-body .content .content-video {
+    width: 180px;
+    height: 130px;
+    line-height: 130px;
+    background-color: #032f3e;
+    margin-top: 10px;
+}
+#top-slider .item .slider-body .content .content-video a {
+    color: #fff;
+    display: block;
+}
+
+#top-slider .item .slider-body .content .content-video .video-icon {
+    display: block;
+    width: 50px;
+    margin: auto;
+    font-size: 50px;
 }
 /* Top Slider Section End */
