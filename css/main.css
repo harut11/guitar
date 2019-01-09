@@ -40,6 +40,11 @@ a {
     display: flex;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .box {
     padding: 130px 0;
 }
@@ -416,6 +421,27 @@ nav ul li.active a {
     margin-top: 130px;
 }
 
+#projects .container {
+    position: relative;
+}
+
+#projects .container .x-button {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    right: 0;
+    top: -50px;
+    background-color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+#projects .container .x-button a {
+    display: block;
+    color: #9e9e9e;
+}
+
 #projects .project .project-left img {
     max-width: 100%;
     height: auto;
@@ -423,6 +449,42 @@ nav ul li.active a {
 
 #projects .project .project-left {
     width: 65%;
+}
+
+#projects .project .project-left .project-slider-control {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#projects .project .project-left .project-slider-control a {
+    display: inline-block;
+    font-size: 12px;
+    color: #dadcdc;
+}
+
+#projects .project .project-left .project-slider-control a .square {
+    display: block;
+    transform: rotate(45deg);
+}
+
+#projects .project .project-left .project-slider-control a:nth-child(3) {
+    color: #ab987a;
+    margin: 0 15px;
+}
+
+#projects .project .project-left .project-slider-control a .angles {
+    display: block;
+    font-size: 20px;
+}
+
+#projects .project .project-left .project-slider-control a .angles:first-child {
+    margin-right: 120px;
+}
+
+#projects .project .project-left .project-slider-control a .angles:last-child {
+    margin-left: 120px;
 }
 
 #projects .project .project-right {
@@ -505,5 +567,25 @@ nav ul li.active a {
 #projects .project .project-right .folder i,
 #projects .project .project-right .calendar i{
     margin-right: 5px;
+}
+
+#projects .project-categories {
+    padding-top: 130px;
+}
+
+#projects .project-categories .item {
+    flex-basis: 33%;
+}
+
+#projects .project-categories .item .top {
+    padding: 0 30px 15px 30px;
+}
+
+#projects .project-categories .item .bottom {
+    padding: 15px 30px 0 30px;
+}
+
+#projects .project-categories .item img {
+    max-width: 100%;
 }
 /* Projects Section End */
