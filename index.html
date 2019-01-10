@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Guitar Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
         rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity=
@@ -18,7 +19,7 @@
                 </div>
 
                 <div id="header-right" class="pull-right">
-                    <ul class="contacts">
+                    <ul class="contacts flexible">
                         <li>
                             <a href="#">
                                 <i class="fab fa-skype"></i>
@@ -32,7 +33,7 @@
                             </a>
                         </li>
                         <li>
-                            <ul class="social">
+                            <ul class="social flexible">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
@@ -40,6 +41,10 @@
                             </ul>
                         </li>
                     </ul>
+                </div>
+
+                <div id="mobile-nav" class="pull-right">
+                    <a href="#"><i class="fas fa-bars"></i></a>
                 </div>
             </div>
         </header>
@@ -63,16 +68,15 @@
     <!-- Top Slider Section Start -->
         <section id="top-slider">
             <div class="item">
-                <img src="uploads/slider-1.jpg" alt="slider-image">
-                <div class="slider-control">
-                    <a href="#"><span class="angles"><i class="fas fa-angle-up"></i></span></a>
-                    <a href="#"><span class="square"><i class="fas fa-square-full"></i></span></a>
-                    <a href="#"><span class="square active"><i class="fas fa-square-full"></i></span></a>
-                    <a href="#"><span class="square"><i class="fas fa-square-full"></i></span></a>
-                    <a href="#"><span class="angles"><i class="fas fa-angle-down"></i></span></a>
-                </div>
-                <span class="slide-down"><a href="#"><i class="fas fa-angle-down"></i></a></span>
-                <div class="slider-body container">
+                <div class="container">
+                    <div class="slider-control">
+                        <a href="#"><span class="angles"><i class="fas fa-angle-up"></i></span></a>
+                        <a href="#"><span class="square"><i class="fas fa-square-full"></i></span></a>
+                        <a href="#"><span class="square active"><i class="fas fa-square-full"></i></span></a>
+                        <a href="#"><span class="square"><i class="fas fa-square-full"></i></span></a>
+                        <a href="#"><span class="angles"><i class="fas fa-angle-down"></i></span></a>
+                    </div>
+                    <span class="slide-down"><a href="#"><i class="fas fa-angle-down"></i></a></span>
                     <div class="content">
                         <h3>check our video</h3>
                         <h3>learning in 6 weeks</h3>
@@ -174,19 +178,11 @@
                 </div>
             </div>
             <div class="project">
-                <div class="container flexible">
-                    <div class="x-button"><a href="#"><i class="fas fa-times"></i></a></div>
-                    <div class="project-left item" style="flex-grow: 8">
+                <div class="container flexible a">
+                    <div class="project-left item">
                         <img src="uploads/project.jpg" alt="project-image">
-                        <div class="project-slider-control">
-                            <a href="#"><span class="angles"><i class="fas fa-angle-left"></i></span></a>
-                            <a href="#"><span class="square"><i class="far fa-square"></i></span></a>
-                            <a href="#"><span class="square active"><i class="fas fa-square-full"></i></span></a>
-                            <a href="#"><span class="square"><i class="far fa-square"></i></span></a>
-                            <a href="#"><span class="angles"><i class="fas fa-angle-right"></i></span></a>
-                        </div>
                     </div>
-                    <div class="project-right item" style="flex-grow: 2">
+                    <div class="project-right item">
                         <span class="folder"><i class="fas fa-folder-open"></i>shows</span>
                         <span class="calendar"><i class="far fa-calendar-alt"></i>21-08-2015</span>
                         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
@@ -201,26 +197,43 @@
                             <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                         </ul>
                     </div>
-                    </div>
+                    <div class="x-button"><a href="#"><i class="fas fa-times"></i></a></div>
                 </div>
-            <div class="project-categories container flexible">
-                <div class="item">
-                    <a href="#"><i class="fas fa-folder-open"></i>music</a>
-                    <img src="uploads/project-category-1.jpg" alt="music">
+
+                <div class="project-slider-control">
+                    <a href="#"><span class="angles"><i class="fas fa-angle-left"></i></span></a>
+                    <a href="#"><span class="square"><i class="far fa-square"></i></span></a>
+                    <a href="#"><span class="square active"><i class="fas fa-square-full"></i></span></a>
+                    <a href="#"><span class="square"><i class="far fa-square"></i></span></a>
+                    <a href="#"><span class="angles"><i class="fas fa-angle-right"></i></span></a>
                 </div>
-                <div class="item">
-                    <div class="top">
-                        <a href="#"><i class="fas fa-folder-open"></i>rock</a>
-                        <img src="uploads/project-category-2.jpg" alt="rock">
-                    </div>
-                    <div class="bottom">
-                        <a href="#"><i class="fas fa-folder-open"></i>show</a>
-                        <img src="uploads/project-category-2.jpg" alt="shows">
-                    </div>
                 </div>
-                <div class="item">
-                    <a href="#"><i class="fas fa-folder-open"></i>lessons</a>
-                    <img src="uploads/project-category-1.jpg" alt="lessons">
+            <div class="container">
+                <div class="box">
+                    <div class="project-categories flexible">
+                        <div class="item">
+                            <a href="#"><i class="fas fa-folder-open"></i>music</a>
+                            <img src="uploads/project-category-1.jpg" alt="music">
+                        </div>
+                        <div class="item">
+                            <div class="top">
+                                <a href="#"><i class="fas fa-folder-open"></i>rock</a>
+                                <img src="uploads/project-category-2.jpg" alt="rock">
+                            </div>
+                            <div class="bottom">
+                                <a href="#"><i class="fas fa-folder-open"></i>show</a>
+                                <img src="uploads/project-category-2.jpg" alt="shows">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <a href="#"><i class="fas fa-folder-open"></i>lessons</a>
+                            <img src="uploads/project-category-1.jpg" alt="lessons">
+                        </div>
+                    </div>
+                    <div class="pagination flexible">
+                        <a class="item left" href="#"><i class="fas fa-angle-left"></i></a>
+                        <a class="item right" href="#"><i class="fas fa-angle-right"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
