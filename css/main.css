@@ -841,3 +841,31 @@ nav ul li.active a {
 
 }
 /* Projects Section End */
+
+/* Call Us Section Start */
+#call-us {
+    background-color: #9e9e9e;
+    color: #032f3;
+    padding: 30px 0;
+    height: 200px;
+}
+
+#call-us .items .item {
+    flex-basis: 50%;
+}
+
+#call-us .items .left .skype-icon {
+    font-size: 100px;
+    float: left;
+}
+
+#call-us .items .left p {
+    float: left;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#call-us .items .left .top {
+    font-weight: bold;
+}
+/* Call Us Section End */
