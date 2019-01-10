@@ -557,7 +557,7 @@ nav ul li.active a {
 /* Lessons Section End */
 
 /* Projects Section Start */
-#services, #projects {
+#services, #projects, #articles {
     background-color: #f8f9fb;
 }
 
@@ -936,3 +936,95 @@ nav ul li.active a {
     }
 }
 /* Call Us Section End */
+
+/* Articles Section Start */
+#articles .articles {
+    width: 100%;
+    padding-top: 130px;
+}
+
+#articles .articles .article {
+    flex-basis: 50%;
+    height: auto;
+}
+
+#articles .articles .article .thumbnail {
+    height: 240px;
+    flex-direction: column;
+    align-items: flex-end;
+    background: url("/uploads/slider-1.jpg") no-repeat;
+}
+
+#articles .articles .left .content {
+    padding: 30px 10px 20px 20px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#articles .articles .left .content h3 {
+    font-size: 18px;
+    color: #032f3e;
+    line-height: 35px;
+}
+
+#articles .articles .left .content h3::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #ab987a;
+    width: 30%;
+    margin-top: 30px;
+}
+
+#articles .articles .left .content p {
+    color: #5c5c5c;
+    line-height: 30px;
+    margin: 30px 0;
+}
+
+#articles .articles .left .content a {
+    display: block;
+    font-size: 15px;
+}
+
+#articles .articles .left .content .folder {
+    text-transform: uppercase;
+    color: #ab987a;
+}
+
+#articles .articles .left .content .folder i {
+    margin-right: 10px;
+}
+
+#articles .articles .left .content .circle {
+    color: #032f3e;
+}
+
+#articles .articles .left .content a i {
+    font-size: 20px;
+}
+
+#articles .articles .left {
+    margin-right: 10px;
+}
+
+#articles .articles .right {
+    margin-left: 10px;
+}
+
+.top-comment, .bottom-date {
+    width: 80px;
+    height: 80px;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
+
+.top-comment {
+    background-color: #ab987a;
+}
+
+.bottom-date{
+    background-color: #032f3e;
+}
+/* Articles Section End */
