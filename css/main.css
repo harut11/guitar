@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fb;
 }
 
 ul {
@@ -557,10 +558,6 @@ nav ul li.active a {
 /* Lessons Section End */
 
 /* Projects Section Start */
-#services, #projects, #articles {
-    background-color: #f8f9fb;
-}
-
 #projects .project {
     background-color: #fff;
     margin-top: 130px;
@@ -949,25 +946,30 @@ nav ul li.active a {
 }
 
 #articles .articles .article .thumbnail {
-    height: 240px;
+    height: 200px;
     flex-direction: column;
     align-items: flex-end;
     background: url("/uploads/slider-1.jpg") no-repeat;
 }
 
-#articles .articles .left .content {
+#articles .articles .left .info {
     padding: 30px 10px 20px 20px;
     background-color: #fff;
     overflow: hidden;
+    border-bottom: 1px solid #eee;
+    border-radius: 0 0 5px 5px;
 }
 
-#articles .articles .left .content h3 {
-    font-size: 18px;
+#articles .articles .left .info h3,
+#articles .articles .right .small-item .middle h3 {
+    font-size: 17px;
     color: #032f3e;
     line-height: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-#articles .articles .left .content h3::after {
+#articles .articles .left .info h3::after {
     content: "";
     display: block;
     border-bottom: 3px solid #ab987a;
@@ -975,32 +977,36 @@ nav ul li.active a {
     margin-top: 30px;
 }
 
-#articles .articles .left .content p {
+#articles .articles .left .info p {
     color: #5c5c5c;
     line-height: 30px;
     margin: 30px 0;
 }
 
-#articles .articles .left .content a {
+#articles .articles .left .info a,
+#articles .articles .right .small-item .middle a {
     display: block;
+    font-size: 14px;
+}
+
+#articles .articles .left .info a i,
+#articles .articles .right .small-item .middle a i {
     font-size: 15px;
 }
 
-#articles .articles .left .content .folder {
+#articles .articles .left .info .folder,
+#articles .articles .right .small-item .middle .folder {
     text-transform: uppercase;
     color: #ab987a;
 }
 
-#articles .articles .left .content .folder i {
+#articles .articles .left .info .folder i,
+#articles .articles .right .small-item .middle .folder i {
     margin-right: 10px;
 }
 
-#articles .articles .left .content .circle {
+#articles .articles .left .info .circle {
     color: #032f3e;
-}
-
-#articles .articles .left .content a i {
-    font-size: 20px;
 }
 
 #articles .articles .left {
@@ -1009,15 +1015,63 @@ nav ul li.active a {
 
 #articles .articles .right {
     margin-left: 10px;
+    flex-direction: column;
+}
+
+#articles .articles .right .small-item .left {
+    flex-basis: 33%;
+    height: 100%;
+}
+
+#articles .articles .right .small-item .left img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#articles .articles .right .small-item .middle {
+    flex-basis: 57%;
+    padding: 15px 15px 10px 15px;
+}
+
+#articles .articles .right .small-item .right {
+    flex-basis: 10%;
+}
+
+#articles .articles .right .small-item {
+    height: 134px;
+    background-color: #fff;
+    border: 1px solid #eee;
+}
+
+#articles .articles .right .small-item:nth-child(2) {
+    margin: 73px 0;
+}
+
+#articles .articles .right .small-item:last-child {
+    background-color: #032f3e;
+}
+
+#articles .articles .right .small-item:last-child .middle h3 {
+    color: #fff;
+}
+
+#articles .articles .right .small-item .middle a {
+    margin-top: 15px;
 }
 
 .top-comment, .bottom-date {
-    width: 80px;
-    height: 80px;
+    width: 66px;
+    height: 66px;
     padding: 10px 15px;
     color: #fff;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
+}
+
+.top-comment i, .bottom-date i {
+    font-size: 25px;
+    margin-bottom: 5px;
 }
 
 .top-comment {
@@ -1026,5 +1080,93 @@ nav ul li.active a {
 
 .bottom-date{
     background-color: #032f3e;
+}
+
+#articles .button {
+    display: block;
+    color: #ab987a;
+    background-color: transparent;
+    border: 3px solid #ab987a;
+    padding: 20px 40px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 277px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+#articles .button:hover {
+    background-color: #ab987a;
+    color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+    #articles .articles .article {
+        height: auto;
+    }
+
+    #articles .articles .right .small-item .middle h3,
+    #articles .articles .left .info h3,
+    #articles .articles .left .info p {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    #articles .articles .right .small-item .middle {
+        padding: 10px;
+    }
+
+    #articles .articles .right .small-item .middle .folder,
+    #articles .articles .left .info .folder {
+        font-size: 10px;
+    }
+
+    #articles .articles .right .small-item .middle .folder i,
+    #articles .articles .left .info .folder i {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .top-comment, .bottom-date {
+        width: 33px;
+        height: 33px;
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .top-comment i, .bottom-date i {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #articles .articles {
+        flex-direction: column;
+    }
+
+    .top-comment, .bottom-date {
+        width: 66px;
+        height: 66px;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .top-comment i, .bottom-date i {
+        font-size: 25px;
+    }
+
+    #articles .articles .article:first-child {
+        margin-bottom: 70px;
+    }
+
+    #articles .button {
+        width: 136px;
+        padding: 10px 20px;
+        font-size: 10px;
+    }
 }
 /* Articles Section End */
