@@ -274,7 +274,8 @@ nav ul li.active a {
     overflow: hidden;
 }
 
-#top-slider::after {
+#top-slider::after,
+#testimonials::after {
     content: "";
     display: block;
     position: absolute;
@@ -1211,6 +1212,23 @@ nav ul li.active a {
 #testimonials {
     background: url("/uploads/background.jpg") no-repeat center;
     text-align: center;
+    background-size: cover;
+    position: relative;
+}
+
+#testimonials::after {
+    border-color: transparent transparent #ab987a transparent;
+}
+
+#testimonials .map {
+    position: absolute;
+    display: block;
+    color: #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 20px;
 }
 
 #testimonials .person {
@@ -1224,7 +1242,7 @@ nav ul li.active a {
     width: 170px;
     margin: auto;
     overflow: hidden;
-    background-position: center;
+    background-size: contain;
 }
 
 #testimonials .person .image img {
@@ -1306,3 +1324,74 @@ nav ul li.active a {
     }
 }
 /* Testimonials Section End */
+
+/* Map Section Start */
+#map {
+    border-top: 5px solid #ab987a;
+    position: relative;
+}
+
+#map .mapouter,
+#map .mapouter .gmap_canvas {
+    width: 100%;
+}
+
+.mapouter {
+    text-align:right;
+    height:659px;
+    width:1170px;
+}
+
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:659px;
+    width:1170px;
+}
+
+#map .address {
+    position: absolute;
+    width: 390px;
+    top: 150px;
+    left: 60%;
+    transform: translateX(-60%);
+    background-color: #fff;
+    padding: 20px;
+    color: #032f3e;
+}
+
+#map .address::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotateY(77deg);
+    border: 77px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+}
+
+#map .address .content {
+    width: 70%;
+    line-height: 25px;
+}
+
+#map .address .content h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#map .address img {
+    padding: 5px;
+    margin-right: 15px;
+}
+
+#map .address .close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #9e9e9e;
+}
+/* Map Section End */
