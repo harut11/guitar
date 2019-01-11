@@ -292,18 +292,17 @@ nav ul li.active a {
     height: 850px;
 }
 
-#top-slider .item .slider-control {
+.slider-control {
     position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-#top-slider .item .slider-control a {
+.slider-control a {
     color: #fff;
     display: block;
     font-size: 20px;
-
 }
 
 #top-slider .item .slide-down {
@@ -320,29 +319,29 @@ nav ul li.active a {
     font-size: 30px;
 }
 
-#top-slider .item .slider-control a:not(:last-child) {
+.slider-control a:not(:last-child) {
     margin-bottom: 10px;
 }
 
-#top-slider .item .slider-control a .square {
+.slider-control a .square {
     display: block;
     transform: rotate(45deg);
     font-size: 10px;
 }
 
-#top-slider .item .slider-control a .angles {
+.slider-control a .angles {
     display: block;
 }
 
-#top-slider .item .slider-control a .active {
+.slider-control a .active {
     color: #ab987a;
 }
 
-#top-slider .item .slider-control a .angles:first-child {
+.slider-control a .angles:first-child {
     margin-bottom: 20px;
 }
 
-#top-slider .item .slider-control a .angles:last-child {
+.slider-control a .angles:last-child {
     margin-top: 20px;
 }
 
@@ -1016,6 +1015,39 @@ nav ul li.active a {
 #articles .articles .right {
     margin-left: 10px;
     flex-direction: column;
+    position: relative;
+}
+
+#articles .articles .right .slider-control {
+    right: -40px;
+}
+
+#articles .articles .right .slider-control a {
+    font-size: 25px;
+}
+
+#articles .articles .right .slider-control a:first-child {
+    margin-bottom: 50px;
+}
+
+#articles .articles .right .slider-control a:last-child {
+    margin-top: 50px;
+}
+
+#articles .articles .right .slider-control a .angles {
+    color: #d6d6d6;
+}
+
+#articles .articles .right .slider-control a:not(:nth-child(3)) .square {
+    border: 3px solid #d6d6d6;
+    font-size: 3px;
+    width: 10px;
+    margin: 0 auto;
+}
+
+#articles .articles .right .slider-control a:nth-child(3) .square {
+    font-size: 12px;
+    margin: 18px 0;
 }
 
 #articles .articles .right .small-item .left {
@@ -1141,6 +1173,10 @@ nav ul li.active a {
     .top-comment i, .bottom-date i {
         font-size: 12px;
     }
+
+    #articles .articles .right .slider-control {
+        right: -30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1170,3 +1206,103 @@ nav ul li.active a {
     }
 }
 /* Articles Section End */
+
+/* Testimonials Section Start */
+#testimonials {
+    background: url("/uploads/background.jpg") no-repeat center;
+    text-align: center;
+}
+
+#testimonials .person {
+    margin-top: 100px;
+    position: relative;
+}
+
+#testimonials .person .image {
+    border-radius: 50%;
+    border: 3px solid #ab987a;
+    width: 170px;
+    margin: auto;
+    overflow: hidden;
+    background-position: center;
+}
+
+#testimonials .person .image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+#testimonials .person .bio {
+    margin: auto;
+    width: 70%;
+    margin-top: 40px;
+}
+
+#testimonials .person .bio p:first-child {
+
+    color: #5c5c5c;
+}
+
+#testimonials .person .bio h3 {
+    font-size: 24px;
+    color: #032f3e;
+    margin-top: 40px;
+}
+
+#testimonials .person .bio p:last-child {
+    font-size: 18px;
+    color: #ab987a;
+    margin-top: 20px;
+}
+
+#testimonials .person button {
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    background: transparent;
+    border: 3px solid #ab987a;
+    color: #ab987a;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#testimonials .person button:hover {
+    background-color: #ab987a;
+    color: #fff;
+}
+
+#testimonials .person button.left {
+    left: 0;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+#testimonials .person button.right {
+    right: 0;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+@media screen and (max-width: 768px) {
+    #testimonials .person button {
+        width: 50px;
+        height: 50px;
+        font-size: 17px;
+    }
+
+    #testimonials .person .image {
+        width: 140px;
+    }
+
+    #testimonials .person .bio h3 {
+        font-size: 20px;
+    }
+
+    #testimonials .person .bio p:last-child {
+        font-size: 15px;
+    }
+}
+/* Testimonials Section End */
