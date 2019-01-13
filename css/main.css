@@ -1184,6 +1184,19 @@ nav ul li.active a {
     padding-top: 130px;
 }
 
+#articles .main {
+    position: relative;
+}
+
+#article-slider-control {
+    position: absolute;
+    right: -50px;
+    top: 60%;
+    transform: translateY(-60%);
+}
+
+}
+
 #articles .articles .article {
     flex-basis: 50%;
     height: auto;

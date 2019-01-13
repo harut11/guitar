@@ -35,9 +35,13 @@ $(document).ready(function() {
 
 	$('#articles .owl-carousel').owlCarousel({
     loop:false,
-    dots: false,
+    dots: true,
+    dotsContainer:'#article-slider-control .dots',
+    dotsClass:'.dot',
     margin:0,
     nav:true,
+    navContainer:'#article-slider-control',
+    navText:[$('#article-slider-control .prev'),$('#article-slider-control .next')],
     items:1
 })
 
