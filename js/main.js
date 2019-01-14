@@ -15,7 +15,7 @@ $(document).ready(function() {
     loop:false,
     dots: true,
     dotsContainer:'#projects-slider-control .dots',
-    dotsClass:'.dot',
+    dotsClass:'#projects-slider-control .dots .dot',
     margin:0,
     nav:true,
     navContainer:'#projects-slider-control',
@@ -44,5 +44,14 @@ $(document).ready(function() {
     navText:[$('#article-slider-control .prev'),$('#article-slider-control .next')],
     items:1
 })
+
+    $('#testimonials .owl-carousel').owlCarousel({
+        loop:true,
+        dots: false,
+        margin:0,
+        nav:true,
+        navText:[$('#testimonials .main .left'),$('#testimonials .main .right')],
+        items:1
+    })
 
 });
